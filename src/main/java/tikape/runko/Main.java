@@ -74,8 +74,8 @@ public class Main {
         }, new ThymeleafTemplateEngine());
 
         post("/", (req, res) -> {
-            if (!req.queryParams("aihe").isEmpty() && !req.queryParams("nimi").isEmpty()) {
-                aiheDao.lisaa(req.queryParams("aihe"), req.queryParams("nimi"));
+            if (!req.queryParams("keskustelu").isEmpty() && !req.queryParams("nimi").isEmpty()) {
+                aiheDao.lisaa(req.queryParams("keskustelu"), req.queryParams("nimi"));
             }
             res.redirect(req.pathInfo());
             return "ok";
